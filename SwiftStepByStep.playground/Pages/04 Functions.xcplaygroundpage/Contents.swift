@@ -40,7 +40,17 @@ print(greetings())                // Hola a todos!
 // area(width: 3, height: 4) -> 12
 // area(side: 5) -> 25
 
+// Rectángulo: ancho x alto
 func area(width: Int, height: Int) -> Int {
-    return Int
-    
+    return width * height
 }
+
+// Cuadrado: lado x lado
+func area(side: Int) -> Int {
+    return side * side
+}
+
+// Pruebas
+print(area(width: 3, height: 4)) // 12
+print(area(side: 5))             // 25
+
