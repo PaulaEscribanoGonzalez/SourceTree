@@ -27,8 +27,13 @@ print("Bag:", bag, "| sortedNames:", sortedNames, "| top:", topScore)
 // Añade un nuevo nombre al array.
 // Después imprime el primer y el último elemento del array.
 
-var nombres: [String] = ["Paula", "Paula", "Marta", "Lucia", "Isabel"]
-nombres.append("Isabel")
+var nombres: [String] = ["Paula", "Marta", "Lucia", "Isabel", "Sergio"]
+nombres.append("Carlos") // añadimos un nuevo nombre
+
+if let primero = nombres.first, let ultimo = nombres.last {
+    print("Primer nombre:", primero)
+    print("Último nombre:", ultimo)
+}
 
 print ("Primer Nombre: ", nombres.first)
 print ("Último Nombre: ", nombres.last)
