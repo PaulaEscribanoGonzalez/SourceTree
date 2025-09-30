@@ -22,6 +22,28 @@ print("copy1.value: \(copy1.value), copy2.value : \(copy2.value)")
 // Crea un array [Animal] que contenga un Dog y un Cat
 // y recorre el array imprimiendo cada sonido mediante polimorfismo.
 
-class Cat: Animal {
-    override func sound() -> String { "Meow" } // con override sobreescribimos el código de Animal
+class Animal {
+    let name: String
+    init(name: String) { self.name = name }
+    func sound() -> String { "..." }
 }
+
+class Dog: Animal {
+    override func sound() -> String { "Guau" }
+}
+
+class Cat: Animal {
+    override func sound() -> String { "Miau" }
+}
+
+// Creamos un array de animales
+let animals: [Animal] = [
+    Dog(name: "Dobby"),
+    Cat(name: "Misu")
+]
+
+// Recorremos el array
+for animal in animals {
+    print("\(animal.name) dice \(animal.sound())")
+}
+
