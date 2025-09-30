@@ -15,3 +15,10 @@ print("Pi:", pi, "| Full:", isFull)
 // ------------------------------------------------------------
 // TODO: Crea dos variables nombre y edad.
 // Aumenta la edad en uno y muestra: "Next year, NAME will be AGE".
+
+var name: String = "Paula"
+var age: Int = 22
+
+age += 1 // aumentar la edad en 1
+
+print("Next year, \(name) will be \(age)")
