@@ -24,3 +24,11 @@ for age in [5, 16, 30, 88] {
 // y "FizzBuzz" si es divisible por ambos.
 // 💡 Pista: usa el operador % (módulo) para saber si un número es divisible.
 // Ejemplo: 6 % 3 == 0 significa que 6 es divisible entre 3.
+
+func fizzbuzz(n: Int) {
+    if n % 3 == 0 {print ("Fizz")}
+    
+    if n % 5 == 0{print ("Fizz")}
+    
+    if n % 3 == 0 && n % 5 == 0 {print ("FizzBuzz")}
+}

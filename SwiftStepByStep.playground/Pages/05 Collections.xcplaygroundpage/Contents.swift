@@ -26,3 +26,11 @@ print("Bag:", bag, "| sortedNames:", sortedNames, "| top:", topScore)
 // TODO: Crea un array con al menos 5 nombres de compañeros de clase.
 // Añade un nuevo nombre al array.
 // Después imprime el primer y el último elemento del array.
+
+var nombres: [String] = ["Paula", "Paula", "Marta", "Lucia", "Isabel"]
+nombres.append("Isabel")
+
+print ("Primer Nombre: ", nombres.first)
+print ("Último Nombre: ", nombres.last)
+
+

@@ -12,6 +12,8 @@ class Dog: Animal {
 let a: Animal = Dog(name: "Dobby")
 print("\(a.name) dice \(a.sound())")
 
+copy1.value = 5
+print("copy1.value: \(copy1.value), copy2.value : \(copy2.value)")
 
 // ------------------------------------------------------------
 // 🧪 Mini-reto
@@ -19,3 +21,7 @@ print("\(a.name) dice \(a.sound())")
 // TODO: Crea una subclase `Cat` con el método `sound()` que devuelva "Miau".
 // Crea un array [Animal] que contenga un Dog y un Cat
 // y recorre el array imprimiendo cada sonido mediante polimorfismo.
+
+class Cat: Animal {
+    override func sound() -> String { "Meow" } // con override sobreescribimos el código de Animal
+}

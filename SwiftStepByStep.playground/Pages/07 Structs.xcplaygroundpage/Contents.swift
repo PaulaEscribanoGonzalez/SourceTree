@@ -21,3 +21,4 @@ print("c1:", c1.value, "c2:", c2.value)
 // TODO: Añade un método `reset()` marcado como mutating en Counter
 // que ponga el valor a 0.
 // Llama a este método y comprueba que el valor se reinicia.
+
