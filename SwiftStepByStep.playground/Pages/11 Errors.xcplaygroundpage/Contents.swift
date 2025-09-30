@@ -37,3 +37,32 @@ print("try? result:", maybeN as Any) // nil
 // TODO: Crea un enum de error `FormError` con un caso `emptyName`.
 // Escribe una función `validate(name:)` que lance ese error si la cadena está vacía;
 // en caso contrario debe devolver el nombre con espacios eliminados al principio y al final.
+
+// Definimos un nuevo error para el formulario
+enum FormError: Error {
+    case emptyName
+}
+
+// Función de validación
+func validate(name: String) throws -> String {
+    // Eliminamos espacios y saltos de línea
+    let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+    
+    // Si está vacío después de limpiar, lanzamos error
+    guard !trimmed.isEmpty else { throw FormError.emptyName }
+    
+    // Si es válido, lo devolvemos limpio
+    return trimmed
+}
+
+// Ejemplo de uso con do–catch
+do {
+    let valid = try validate(name: "  Paula  ")
+    print("Nombre válido:", valid)
+    
+    let invalid = try validate(name: "   ")
+    print("Nombre válido:", invalid)
+} catch {
+    print("Error de formulario:", error) // Error de formulario: emptyName
+}
+
