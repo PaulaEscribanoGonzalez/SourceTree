@@ -43,3 +43,10 @@ render(.failure(code: 404, message: "Not Found")) // Error 404: Not Found
 // ------------------------------------------------------------
 // TODO: Añade un nuevo caso a NetworkState: `redirect(url: String)`
 // Actualiza la función `render(_:)` para manejarlo y pruébalo.
+
+// Probamos la función render() con cada uno de los estados posibles.
+render(.idle)                                  // Idle
+render(.loading)                               // Loading...
+render(.success(data: "Hello"))                // Success with data: Hello
+render(.failure(code: 404, message: "Not Found")) // Error 404: Not Found
+render(.redirect(url: "https://example.com"))  // Redirect to: https://example.com
