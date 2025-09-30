@@ -20,3 +20,26 @@ print("Display name:", displayName)
 // Asígnale nil y comprueba con `if let` si tiene valor o no.
 // Después asígnale un número de teléfono y vuelve a comprobarlo.
 // Usa el operador ?? para mostrar "Desconocido" si está en nil.
+
+var telefono: String? = nil
+
+// Primer chequeo con if let
+if let number = telefono {
+    print("Teléfono:", number)
+} else {
+    print("No hay teléfono todavía")
+}
+
+// Asignamos un valor
+telefono = "123456789"
+
+// Segundo chequeo con if let
+if let number = telefono {
+    print("Teléfono:", number)
+} else {
+    print("No hay teléfono todavía")
+}
+
+// Uso de ?? para mostrar valor por defecto
+let telefonoMostrado = telefono ?? "Desconocido"
+print("Teléfono mostrado:", telefonoMostrado)
