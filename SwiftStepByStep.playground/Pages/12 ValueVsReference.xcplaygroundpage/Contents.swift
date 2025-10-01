@@ -39,3 +39,40 @@ print("Reference semantics -> rb1:", rb1.items, "| rb2:", rb2.items)
 // TODO: Crea una función `appendC(to:)` que añada "C" a un Bag y lo devuelva.
 // Muestra que el original no se modifica (semántica de valor).
 // Haz lo mismo con RefBag y aprecia la diferencia.
+
+// Función para Bag (struct - valor)
+func appendC(to bag: Bag) -> Bag {
+    var copy = bag          // se hace una copia
+    copy.items.append("C")  // modificamos la copia
+    return copy             // devolvemos la copia modificada
+}
+
+// Función para RefBag (class - referencia)
+func appendC(to bag: RefBag) -> RefBag {
+    bag.items.append("C")   // modificamos el objeto directamente
+    return bag              // devolvemos la misma referencia
+}
+
+// ---------------------------
+// Ejemplo con struct
+// ---------------------------
+var bag1 = Bag(items: ["A"])
+let bag2 = appendC(to: bag1)
+
+print("Struct -> bag1:", bag1.items, "| bag2:", bag2.items)
+// Resultado esperado:
+// bag1 = ["A"]
+// bag2 = ["A", "C"]
+
+// ---------------------------
+// Ejemplo con class
+// ---------------------------
+let refBag1 = RefBag()
+refBag1.items.append("A")
+let refBag2 = appendC(to: refBag1)
+
+print("Class -> refBag1:", refBag1.items, "| refBag2:", refBag2.items)
+// Resultado esperado:
+// refBag1 = ["A", "C"]
+// refBag2 = ["A", "C"]
+// (ambos apuntan al mismo objeto)
