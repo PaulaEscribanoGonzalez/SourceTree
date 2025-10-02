@@ -35,7 +35,4 @@ if let primero = nombres.first, let ultimo = nombres.last {
     print("Último nombre:", ultimo)
 }
 
-print ("Primer Nombre: ", nombres.first)
-print ("Último Nombre: ", nombres.last)
-
 
