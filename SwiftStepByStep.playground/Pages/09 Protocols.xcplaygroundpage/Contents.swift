@@ -38,3 +38,32 @@ print(s.describe()) // Estudiante(1) Iker
 // ------------------------------------------------------------
 // TODO: Crea un nuevo tipo `Course` que adopte el protocolo Describable.
 // Debe imprimir algo como: "Curso(iOS) créditos: 6".
+
+// 1. Definición del Protocolo
+protocol Describable {
+    // Requisito 1: Una propiedad calculada para la descripción corta
+    var shortDescription: String { get }
+    
+    // Requisito 2: Una función para imprimir la descripción
+    func describe() -> String
+}
+
+// 2. Implementación del Protocolo en la Struct
+struct Course: Describable {
+    let title: String
+    let credits: Int
+    
+    // Implementación del requisito 'shortDescription'
+    var shortDescription: String {
+        return "Curso(\(title)) créditos: \(credits)"
+    }
+    
+    // Implementación del requisito 'describe()'
+    func describe() -> String {
+        return shortDescription
+    }
+}
+
+// Ejemplo de uso
+let c = Course(title: "iOS", credits: 6)
+print(c.describe())
