@@ -38,6 +38,8 @@ print("try? result:", maybeN as Any) // nil
 // Escribe una función `validate(name:)` que lance ese error si la cadena está vacía;
 // en caso contrario debe devolver el nombre con espacios eliminados al principio y al final.
 
+import Foundation // 👈 Importamos Foundation para acceder a String.trimmingCharacters
+
 // Definimos un nuevo error para el formulario
 enum FormError: Error {
     case emptyName
@@ -60,9 +62,9 @@ do {
     let valid = try validate(name: "  Paula  ")
     print("Nombre válido:", valid)
     
-    let invalid = try validate(name: "   ")
-    print("Nombre válido:", invalid)
+    // Esta línea lanzará un error, saltando al catch
+    let invalid = try validate(name: "   ") 
+    print("Nombre válido:", invalid) 
 } catch {
-    print("Error de formulario:", error) // Error de formulario: emptyName
+    print("Error de formulario:", error) 
 }
-
