@@ -40,6 +40,24 @@ print("Reference semantics -> rb1:", rb1.items, "| rb2:", rb2.items)
 // Muestra que el original no se modifica (semántica de valor).
 // Haz lo mismo con RefBag y aprecia la diferencia.
 
+// ---------------------------
+// Definiciones iniciales
+// ---------------------------
+
+// Struct (semántica de valor)
+struct Bag { 
+    var items: [String] 
+}
+
+// Class (semántica de referencia)
+class RefBag { 
+    var items: [String] = [] 
+}
+
+// ---------------------------
+// Funciones
+// ---------------------------
+
 // Función para Bag (struct - valor)
 func appendC(to bag: Bag) -> Bag {
     var copy = bag          // se hace una copia
@@ -76,3 +94,4 @@ print("Class -> refBag1:", refBag1.items, "| refBag2:", refBag2.items)
 // refBag1 = ["A", "C"]
 // refBag2 = ["A", "C"]
 // (ambos apuntan al mismo objeto)
+
