@@ -34,7 +34,7 @@ func fizzbuzz(n: Int) {
         } else if i % 5 == 0 {
             print("Buzz")
         } else {
-            print(i)
+            print(i, "no es divisible por 3, por 5 ni por ambos números")
         }
     }
 }
