@@ -44,9 +44,35 @@ render(.failure(code: 404, message: "Not Found")) // Error 404: Not Found
 // TODO: Añade un nuevo caso a NetworkState: `redirect(url: String)`
 // Actualiza la función `render(_:)` para manejarlo y pruébalo.
 
+// 1. Definición del Enum NetworkState
+enum NetworkState {
+    case idle
+    case loading
+    case success(data: String)
+    case failure(code: Int, message: String)
+    case redirect(url: String) // Este caso era parte del mini-reto
+}
+
+// 2. Definición de la Función render
+func render(_ state: NetworkState) {
+    switch state {
+    case .idle:
+        print("Idle")
+    case .loading:
+        print("Loading...")
+    case .success(let data):
+        print("Success with data:", data)
+    case .failure(let code, let message):
+        print("Error \(code):", message)
+    case .redirect(let url):
+        print("Redirect to:", url)
+    }
+}
+
+// 3. Llamadas a la función (Tus líneas originales)
 // Probamos la función render() con cada uno de los estados posibles.
-render(.idle)                                  // Idle
-render(.loading)                               // Loading...
-render(.success(data: "Hello"))                // Success with data: Hello
-render(.failure(code: 404, message: "Not Found")) // Error 404: Not Found
-render(.redirect(url: "https://example.com"))  // Redirect to: https://example.com
+render(.idle)
+render(.loading)
+render(.success(data: "Hello"))
+render(.failure(code: 404, message: "Not Found"))
+render(.redirect(url: "https://example.com"))
