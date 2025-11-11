@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esto es un label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Iw-Id-BvA">
+                    <rect key="frame" x="20" y="60" width="353" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esto es otro label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB9-uu-Nq6">
+                    <rect key="frame" x="20" y="109" width="353" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFY-fT-dq9">
+                    <rect key="frame" x="20" y="152" width="173" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Mi boton"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSr-SX-931">
+                    <rect key="frame" x="213" y="152" width="160" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Tu boton"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-5b-b70">
+                    <rect key="frame" x="20" y="211" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fuN-eV-hfg"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Este boton tiene 50 de alto"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Th-Eb-izy">
+                    <rect key="frame" x="20" y="271" width="353" height="541"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VFY-fT-dq9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="07p-9X-YLT"/>
+                <constraint firstItem="VSr-SX-931" firstAttribute="top" secondItem="iB9-uu-Nq6" secondAttribute="bottom" constant="22" id="A8w-kw-OHp"/>
+                <constraint firstItem="VFY-fT-dq9" firstAttribute="top" secondItem="iB9-uu-Nq6" secondAttribute="bottom" constant="22" id="AM0-f3-yln"/>
+                <constraint firstItem="8Iw-Id-BvA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="DV3-gi-cvN"/>
+                <constraint firstItem="DvQ-5b-b70" firstAttribute="top" secondItem="VFY-fT-dq9" secondAttribute="bottom" constant="24" id="EPe-oY-cad"/>
+                <constraint firstItem="2Th-Eb-izy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="F0T-nk-NFR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VSr-SX-931" secondAttribute="trailing" constant="20" id="Gd7-9m-NaU"/>
+                <constraint firstItem="DvQ-5b-b70" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SMS-vy-J8e"/>
+                <constraint firstItem="iB9-uu-Nq6" firstAttribute="trailing" secondItem="8Iw-Id-BvA" secondAttribute="trailing" id="Z6o-yM-DEU"/>
+                <constraint firstItem="2Th-Eb-izy" firstAttribute="top" secondItem="DvQ-5b-b70" secondAttribute="bottom" constant="10" id="clU-Wi-y1t"/>
+                <constraint firstItem="iB9-uu-Nq6" firstAttribute="leading" secondItem="8Iw-Id-BvA" secondAttribute="leading" id="cqZ-rY-IC2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Th-Eb-izy" secondAttribute="trailing" constant="20" id="dFL-Bc-eez"/>
+                <constraint firstItem="iB9-uu-Nq6" firstAttribute="top" secondItem="8Iw-Id-BvA" secondAttribute="bottom" constant="28" id="dup-AR-I4d"/>
+                <constraint firstItem="8Iw-Id-BvA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="eS1-Vi-pj0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DvQ-5b-b70" secondAttribute="trailing" constant="20" id="jK8-59-GQE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VFY-fT-dq9" secondAttribute="trailing" constant="200" id="lsZ-IP-9Mh"/>
+                <constraint firstAttribute="trailing" secondItem="8Iw-Id-BvA" secondAttribute="trailing" constant="20" id="mIr-e6-rOd"/>
+                <constraint firstAttribute="bottom" secondItem="2Th-Eb-izy" secondAttribute="bottom" constant="40" id="vef-EG-av0"/>
+                <constraint firstItem="VSr-SX-931" firstAttribute="leading" secondItem="VFY-fT-dq9" secondAttribute="trailing" constant="20" id="ySX-Hz-oPv"/>
+            </constraints>
+            <point key="canvasLocation" x="133.58778625954199" y="144.36619718309859"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
